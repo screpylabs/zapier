@@ -34,7 +34,7 @@
     "zapier-platform-core": "18.5.1"
   },
   "devDependencies": {
-    "@eslint/js": "9.39.4",
+    "@eslint/js": "10.0.1",
     "eslint": "10.9.1",
     "prettier": "3.9.6",
     "rimraf": "5.0.10",
