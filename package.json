@@ -17,8 +17,8 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "test": "npm run build && vitest --run",
-    "validate": "npm run build && npx --yes --package zapier-platform-cli@18.5.1 zapier-platform validate",
-    "zapier:build": "npm run build && npx --yes --package zapier-platform-cli@18.5.1 zapier-platform build --skip-dep-install",
+    "validate": "npm run build && npx --yes --package zapier-platform-cli@19.1.0 zapier-platform validate",
+    "zapier:build": "npm run build && npx --yes --package zapier-platform-cli@19.1.0 zapier-platform build --skip-dep-install",
     "_zapier-build": "npm run build"
   },
   "repository": {
