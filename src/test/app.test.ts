@@ -29,7 +29,7 @@ describe('Screpy app definition', () => {
     expect(App.authentication?.connectionLabel).toContain('{{plan}}');
     expect(App.authentication?.connectionLabel).not.toContain('api_key');
     expect(App.authentication?.fields?.[0]?.helpText).toContain(
-      'https://docs.screpy.com/docs/api/authentication',
+      'https://screpy.com/docs/api/authentication',
     );
   });
 });

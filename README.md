@@ -104,9 +104,9 @@ Zapier deployment is intentionally manual. Follow [the release process](docs/rel
 
 ## Documentation
 
-- [Screpy REST API](https://docs.screpy.com/docs/api)
-- [API authentication](https://docs.screpy.com/docs/api/authentication)
-- [API errors and limits](https://docs.screpy.com/docs/api/errors-and-limits)
+- [Screpy REST API](https://screpy.com/docs/api)
+- [API authentication](https://screpy.com/docs/api/authentication)
+- [API errors and limits](https://screpy.com/docs/api/errors-and-limits)
 - [Zapier Platform CLI](https://docs.zapier.com/integrations/build-cli/overview)
 
 ## Security

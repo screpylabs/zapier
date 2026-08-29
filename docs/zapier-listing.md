@@ -9,7 +9,7 @@ Use this content when configuring the Screpy integration in the Zapier Platform 
 | Integration name  | Screpy                               |
 | Category          | Marketing                            |
 | Homepage          | https://screpy.com/                  |
-| API documentation | https://docs.screpy.com/docs/api     |
+| API documentation | https://screpy.com/docs/api          |
 | Support           | https://support.screpy.com/          |
 | Privacy policy    | https://screpy.com/privacy-policy/   |
 | Terms of service  | https://screpy.com/terms-of-service/ |

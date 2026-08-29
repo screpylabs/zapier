@@ -10,7 +10,7 @@ Last technical verification: 2026-08-29. Zapier validation reports 0 errors, 59 
 - [ ] At least one integration admin uses an `@screpy.com` email address.
 - [x] The Screpy homepage is configured in the Zapier Platform UI.
 - [x] Screpy owns and operates the connected production API.
-- [ ] Current API documentation is publicly accessible.
+- [x] Current API documentation is publicly accessible.
 
 ## Authentication and test account
 

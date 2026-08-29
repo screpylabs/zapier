@@ -19,7 +19,7 @@ export default {
       type: 'password',
       required: true,
       helpText:
-        'Create a REST API key in Screpy under Settings > Connected Apps. See https://docs.screpy.com/docs/api/authentication. Use a read-and-write key for actions that change data.',
+        'Create a REST API key in Screpy under Settings > Connected Apps. See https://screpy.com/docs/api/authentication. Use a read-and-write key for actions that change data.',
     },
   ],
   test,
