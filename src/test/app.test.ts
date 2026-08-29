@@ -24,4 +24,12 @@ describe('Screpy app definition', () => {
       });
     });
   });
+
+  it('uses a safe, descriptive authentication label and links to API key documentation', () => {
+    expect(App.authentication?.connectionLabel).toContain('{{plan}}');
+    expect(App.authentication?.connectionLabel).not.toContain('api_key');
+    expect(App.authentication?.fields?.[0]?.helpText).toContain(
+      'https://docs.screpy.com/docs/api/authentication',
+    );
+  });
 });

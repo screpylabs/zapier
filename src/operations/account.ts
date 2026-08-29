@@ -8,11 +8,14 @@ export const getAccount = action({
   path: () => '/account',
   sample: {
     plan: 'pro',
-    accessible_projects: 3,
+    is_paid: true,
+    project_count: 3,
+    features: { website_audit: true, uptime_monitoring: true },
   },
   outputFields: [
     { key: 'plan', label: 'Plan', type: 'string' },
-    { key: 'accessible_projects', label: 'Accessible Projects', type: 'integer' },
+    { key: 'is_paid', label: 'Paid Account', type: 'boolean' },
+    { key: 'project_count', label: 'Project Count', type: 'integer' },
   ],
 });
 
