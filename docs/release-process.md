@@ -24,7 +24,7 @@ For the first private version, register the integration. For an existing integra
 ```bash
 npm run validate
 npm run zapier:build
-npx --yes --package zapier-platform-cli@18.5.1 zapier-platform push
+npx --yes --package zapier-platform-cli@18.5.1 zapier-platform push --skip-dep-install
 ```
 
 Do not promote the version at this stage.

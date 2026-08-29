@@ -6,7 +6,7 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 
 ## [Unreleased]
 
-## [0.1.0] - 2026-08-29
+## [0.0.0] - 2026-08-29
 
 ### Added
 
@@ -16,6 +16,7 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 - New Crawl and Crawl Completed polling triggers.
 - Cursor pagination, dynamic project and crawl choices, and structured crawl-data filters.
 - Mocked test suite, CI workflow, and Zapier review collateral.
+- Safe account-based connection labels and direct API-key documentation in authentication setup.
 
-[Unreleased]: https://github.com/screpylabs/zapier/compare/v0.1.0...HEAD
-[0.1.0]: https://github.com/screpylabs/zapier/releases/tag/v0.1.0
+[Unreleased]: https://github.com/screpylabs/zapier/compare/v0.0.0...HEAD
+[0.0.0]: https://github.com/screpylabs/zapier/releases/tag/v0.0.0

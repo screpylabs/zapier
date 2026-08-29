@@ -9,7 +9,7 @@ Use this content when configuring the Screpy integration in the Zapier Platform 
 | Integration name  | Screpy                               |
 | Category          | Marketing                            |
 | Homepage          | https://screpy.com/                  |
-| API documentation | https://docs.screpy.com/docs/api     |
+| API documentation | https://screpy.com/docs/api          |
 | Support           | https://support.screpy.com/          |
 | Privacy policy    | https://screpy.com/privacy-policy/   |
 | Terms of service  | https://screpy.com/terms-of-service/ |
@@ -17,7 +17,7 @@ Use this content when configuring the Screpy integration in the Zapier Platform 
 
 ## Description
 
-Screpy is an SEO analysis and monitoring platform for website audits, crawl data, search visibility, performance, and uptime. Connect Screpy to Zapier to start crawls, manage projects, retrieve audit data, and automate workflows when crawls are created or completed.
+Screpy is an SEO analysis and monitoring platform for website audits, search visibility, performance, and uptime.
 
 ## Authentication help
 

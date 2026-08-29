@@ -1,7 +1,7 @@
 {
   "name": "screpy-zapier",
-  "version": "0.1.0",
-  "description": "Official Screpy integration for Zapier.",
+  "version": "0.0.0",
+  "description": "Screpy is an SEO analysis and monitoring platform for website audits, search visibility, performance, and uptime.",
   "private": true,
   "type": "module",
   "exports": "./dist/index.js",
