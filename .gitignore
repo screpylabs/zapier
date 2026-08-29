@@ -1,0 +1,12 @@
+build/
+dist/
+node_modules/
+*.tsbuildinfo
+.DS_Store
+.env
+.env.*
+!.env.example
+.npmrc
+.zapierapprc
+.zapierrc
+npm-debug.log*

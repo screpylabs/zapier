@@ -1,0 +1,48 @@
+{
+  "name": "screpy-zapier",
+  "version": "0.1.0",
+  "description": "Official Screpy integration for Zapier.",
+  "private": true,
+  "type": "module",
+  "exports": "./dist/index.js",
+  "engines": {
+    "node": ">=22.22.0 <23"
+  },
+  "scripts": {
+    "clean": "rimraf ./build ./dist",
+    "build": "npm run clean && tsc",
+    "dev": "npm run build -- --watch",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src --max-warnings 0",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "npm run build && vitest --run",
+    "validate": "npm run build && npx --yes --package zapier-platform-cli@18.5.1 zapier-platform validate",
+    "zapier:build": "npm run build && npx --yes --package zapier-platform-cli@18.5.1 zapier-platform build --skip-dep-install",
+    "_zapier-build": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/screpylabs/zapier.git"
+  },
+  "homepage": "https://screpy.com/",
+  "bugs": {
+    "url": "https://github.com/screpylabs/zapier/issues"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "zapier-platform-core": "18.5.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "9.39.4",
+    "eslint": "9.39.4",
+    "prettier": "3.8.3",
+    "rimraf": "5.0.10",
+    "typescript": "5.6.2",
+    "typescript-eslint": "^8.0.0",
+    "vitest": "4.1.11"
+  },
+  "overrides": {
+    "form-data": "4.0.6"
+  }
+}
