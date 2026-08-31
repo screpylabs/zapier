@@ -24,11 +24,23 @@ import {
   listProjects,
   updateProject,
 } from './operations/project.js';
+import {
+  comparisonCrawlChoices,
+  crawlChoices,
+  firstCrawlChoices,
+  projectChoices,
+  secondCrawlChoices,
+} from './triggers/choices.js';
 import { crawlCompleted, newCrawl } from './triggers/crawls.js';
 
 export const triggers = {
   [newCrawl.key]: newCrawl,
   [crawlCompleted.key]: crawlCompleted,
+  [projectChoices.key]: projectChoices,
+  [crawlChoices.key]: crawlChoices,
+  [firstCrawlChoices.key]: firstCrawlChoices,
+  [secondCrawlChoices.key]: secondCrawlChoices,
+  ...Object.fromEntries(comparisonCrawlChoices.map((trigger) => [trigger.key, trigger])),
 };
 
 export const searches = {

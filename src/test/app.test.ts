@@ -4,9 +4,11 @@ import App, { creates, searches, triggers } from '../index.js';
 
 describe('Screpy app definition', () => {
   it('registers every planned component', () => {
+    const visibleTriggers = Object.values(triggers).filter((trigger) => !trigger.display.hidden);
+
     expect(Object.keys(creates)).toHaveLength(20);
     expect(Object.keys(searches)).toHaveLength(3);
-    expect(Object.keys(triggers)).toHaveLength(2);
+    expect(visibleTriggers).toHaveLength(2);
     expect(Object.keys(App.creates ?? {})).toEqual(Object.keys(creates));
     expect(Object.keys(App.searches ?? {})).toEqual(Object.keys(searches));
     expect(Object.keys(App.triggers ?? {})).toEqual(Object.keys(triggers));
@@ -16,7 +18,7 @@ describe('Screpy app definition', () => {
     const registries = [creates, searches, triggers];
     const keys = registries.flatMap((registry) => Object.keys(registry));
 
-    expect(new Set(keys).size).toBe(25);
+    expect(new Set(keys).size).toBe(keys.length);
 
     registries.forEach((registry) => {
       Object.entries(registry).forEach(([key, component]) => {
