@@ -13,7 +13,11 @@ const pollCrawls = async (z, bundle, status?: string) => {
 
   return response.data
     .filter((crawl) => !status || crawl.status === status)
-    .map((crawl) => ({ ...crawl, id: crawl.uid }));
+    .map((crawl) => ({
+      ...crawl,
+      id: crawl.uid,
+      project_uid: String(bundle.inputData.project_uid),
+    }));
 };
 
 export const newCrawl = {

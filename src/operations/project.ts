@@ -160,7 +160,6 @@ const updateProjectFields: InputField[] = [
         key: 'field',
         label: 'Field',
         type: 'string',
-        required: true,
         choices: {
           address: 'Address',
           place_id: 'Place ID',
@@ -173,10 +172,9 @@ const updateProjectFields: InputField[] = [
         key: 'operator',
         label: 'Operator',
         type: 'string',
-        required: true,
         choices: { contains: 'Contains', equals: 'Equals' },
       },
-      { key: 'value', label: 'Value', type: 'string', required: true },
+      { key: 'value', label: 'Value', type: 'string' },
     ],
   },
 ];
@@ -220,7 +218,22 @@ const updateProjectBody = (bundle: Bundle, z: ZObject): JsonObject => {
       validationError(z, 'Replace requires between 1 and 10 map tracker match rules.');
     }
 
-    body.map_tracker_match_rules = rules as JsonObject[];
+    const ruleList = rules as unknown[];
+
+    if (
+      ruleList.some(
+        (rule) =>
+          !rule ||
+          typeof rule !== 'object' ||
+          !('field' in rule) ||
+          !('operator' in rule) ||
+          !('value' in rule),
+      )
+    ) {
+      validationError(z, 'Each map tracker match rule requires a field, operator, and value.');
+    }
+
+    body.map_tracker_match_rules = ruleList as JsonObject[];
   }
 
   if (Object.keys(body).length === 0) {
