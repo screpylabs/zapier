@@ -14,7 +14,7 @@ Zapier deployment is manual and requires a Screpy-owned Zapier developer account
 Authenticate with a Screpy-owned Zapier account:
 
 ```bash
-npx --yes --package zapier-platform-cli@18.5.1 zapier-platform login
+npx --yes --package zapier-platform-cli@19.1.0 zapier-platform login
 ```
 
 For the first private version, register the integration. For an existing integration, link the local repository to its Zapier app ID. Keep the generated `.zapierapprc` file local and untracked.
@@ -24,7 +24,7 @@ For the first private version, register the integration. For an existing integra
 ```bash
 npm run validate
 npm run zapier:build
-npx --yes --package zapier-platform-cli@18.5.1 zapier-platform push --skip-dep-install
+npx --yes --package zapier-platform-cli@19.1.0 zapier-platform push --skip-dep-install
 ```
 
 Do not promote the version at this stage.
