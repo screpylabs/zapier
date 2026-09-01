@@ -1,6 +1,6 @@
 {
   "name": "screpy-zapier",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Screpy is an SEO analysis and monitoring platform for website audits, search visibility, performance, and uptime.",
   "private": true,
   "type": "module",
