@@ -29,7 +29,7 @@ export const getCrawlChoices = async (z: ZObject, bundle: Bundle) => {
   return getCrawlChoicesFor('project_uid')(z, bundle);
 };
 
-const getCrawlChoicesFor = (projectKey: string) => async (z: ZObject, bundle: Bundle) => {
+export const getCrawlChoicesFor = (projectKey: string) => async (z: ZObject, bundle: Bundle) => {
   const projectUid = bundle.inputData[projectKey];
 
   if (!projectUid) {
@@ -62,9 +62,21 @@ export const projectField = (
   label,
   type: 'string',
   required,
-  choices: { perform: getProjectChoices },
+  dynamic: 'project_choices.id.label',
+  altersDynamicFields: true,
   helpText: 'Select a Screpy project or map its 16-character project UID.',
 });
+
+const crawlChoiceTriggerKeys: Record<string, string> = {
+  project_uid: 'crawl_choices',
+  first_project_uid: 'first_crawl_choices',
+  second_project_uid: 'second_crawl_choices',
+  project_uid_1: 'project_1_crawl_choices',
+  project_uid_2: 'project_2_crawl_choices',
+  project_uid_3: 'project_3_crawl_choices',
+  project_uid_4: 'project_4_crawl_choices',
+  project_uid_5: 'project_5_crawl_choices',
+};
 
 export const crawlField = (
   key = 'crawl_uid',
@@ -76,7 +88,8 @@ export const crawlField = (
   label,
   type: 'string',
   required,
-  choices: { perform: getCrawlChoicesFor(projectKey) },
+  dynamic: `${crawlChoiceTriggerKeys[projectKey] ?? 'crawl_choices'}.id.label`,
+  dependsOn: [projectKey],
   helpText: 'Select a crawl from the chosen project or map its 16-character crawl UID.',
 });
 

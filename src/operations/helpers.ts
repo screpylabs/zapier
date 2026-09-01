@@ -112,6 +112,8 @@ export const search = (options: ActionOptions): Search => ({
       return [data];
     },
     sample: options.sample,
-    outputFields: options.outputFields ? ([...options.outputFields] as any) : undefined,
+    outputFields: options.outputFields
+      ? ([{ key: 'id', label: 'ID', type: 'string' }, ...options.outputFields] as any)
+      : undefined,
   },
 });

@@ -21,6 +21,10 @@ const retryDelay = (response: HttpResponse): number => {
 };
 
 export const includeApiKey: BeforeRequestMiddleware = (request, _z, bundle) => {
+  if (request.method === 'PATCH' && /\/v1\/projects\/[^/?]+(?:\?.*)?$/.test(request.url)) {
+    request.method = 'POST';
+  }
+
   request.headers = {
     Accept: 'application/json',
     ...request.headers,
